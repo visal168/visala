@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>ANANA HUMBURGER</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+        <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: orange;
+    }
+
+    li {
+        float: left;
+        font-family: "AKbalthom Moul 4";
+    }
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .show {display:block;}
+    @font-face{
+    font-family: "AKbalthom Khmer Krom";
+                src: url("./font/AKbalthomKhmerKrom.ttf");
+    }
+    @font-face{
+    font-family: Ubuntu;
+                src: url("./font/ubuntu.ttf");
+    }
+    @font-face{
+    font-family: "AKbalthom Moul 4";
+                src: url("./font/AKbalthomMoul.ttf");
+    }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="menu">
+        <ul>
+          <li><a class="active" href="./index.html">គេហទំព័រដើម</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">មាតិកា</a>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="./section1.html" target="show">មូលសង្ខេប</a>
+              <a href="./section2.html" target="show">ការវិភាគទីផ្សារ</a>
+              <a href="./section3.html" target="show">ការពិពណ៌នាខ្លីៗពីអាជីវកម្ម</a>
+              <a href="./section4.html" target="show">ការពិពណ៌នាអំពីផលិតផល និង សេវា</a>
+              <a href="./section5.html" target="show">ការគ្រប់គ្រង់​ និង ការជ្រើសរើសបុគ្គលិក</a>
+              <a href="./section6.html" target="show">ផែនការទីផ្សារ</a>
+              <a href="./section7.html" target="show">ផែនការដំណើរការអាជីវកម្ម</a>
+              <a href="./section8.html" target="show">ផែនការហិរញ្ញវត្ថុ</a>
+            </div>
+          </li>
+          <li><a href="./game/game.html" target="show">ល្បែង</a></li>
+          <li><a href="./members.html" target="show">អំពីយើង</a></li>
+        </ul>
+
+      </div>
+      <div id="demo">
+        <iframe src="./defualt.html" name="show">
+        </iframe>
+      </div>
+      <div id="footer">
+      </div>
+    </div>
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++) {
+          var openDropdown = dropdowns[d];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+  </body>
+</html>
